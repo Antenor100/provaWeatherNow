@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+    <TextView
+            android:text="Latitude:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/latitudeLabel"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="112dp" android:layout_marginStart="44dp"/>
+    <TextView
+            android:text="Longitude:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/longitudeLabel"
+            app:layout_constraintTop_toBottomOf="@+id/latitudeLabel"
+            android:layout_marginTop="32dp" app:layout_constraintStart_toStartOf="@+id/latitudeLabel"
+    />
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/latitudeText"
+            app:layout_constraintStart_toEndOf="@+id/latitudeLabel" android:layout_marginStart="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/latitudeLabel"/>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/longitudeText"
+            app:layout_constraintStart_toEndOf="@+id/longitudeLabel" android:layout_marginStart="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/longitudeLabel"/>
+    <Button
+            android:text="Consultar Clima"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/btnConsultar"
+            app:layout_constraintTop_toBottomOf="@+id/longitudeLabel"
+            android:layout_marginTop="32dp" app:layout_constraintStart_toStartOf="@+id/longitudeLabel"
+            android:layout_marginStart="68dp"/>
+    <ImageView
+            android:layout_width="264dp"
+            android:layout_height="252dp" app:srcCompat="@drawable/ic_launcher_background"
+            android:id="@+id/imagemClima"
+            app:layout_constraintTop_toBottomOf="@+id/btnConsultar" android:layout_marginTop="104dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="65dp"
+            tools:srcCompat="@android:drawable/sym_def_app_icon"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
